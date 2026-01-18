@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debut Invitation | Shielalthea @ 18</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fde6ef;
+      color: #4a2c36;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(rgba(255,230,239,0.6), rgba(249,197,209,0.8)),
+        url('Messenger_creation_F2B4E8BA-2061-45CC-8C5C-3C7D5BB95109.jpeg');
+      background-size: cover;
+      background-position: center;
+      animation: zoom 20s ease-in-out infinite alternate;
+    }
+    @keyframes zoom {
+      from { background-size: 100%; }
+      to { background-size: 110%; }
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .countdown {
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      background: #e48fb1;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #e0a6bb;
+    }
+    form button {
+      background: #e48fb1;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: #f6b6c9;
+      margin-top: 4rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 18px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal-content h3 {
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .modal-content ol { padding-left: 1.2rem; }
+    .close {
+      text-align: right;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Shielalthea @ 18</h1>
+    <p>Requesting the honor of your presence</p>
+    <div class="countdown" id="countdown"></div>
+    <a href="#details" class="btn">View Invitation</a>
+  </div>
+</header>
+
+<section id="details">
+  <h2>Event Details</h2>
+  <div class="details">
+    <div class="card"><h3>Date</h3><p>March 15, 2026</p></div>
+    <div class="card"><h3>Time</h3><p>6:00 PM</p></div>
+    <div class="card"><h3>Venue</h3><p>Grand Ballroom<br>San Jose, Occidental Mindoro</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="Messenger_creation_F778CF7D-8BC7-447F-A7F2-5690244E9685.jpeg">
+    <img src="Messenger_creation_F2B4E8BA-2061-45CC-8C5C-3C7D5BB95109.jpeg">
+    <img src="Messenger_creation_081186B6-A8E8-45B9-8A40-38805588E5B0.jpeg">
+  </div>
+</section>
+
+<section>
+  <h2>18 Treasures of the Night</h2>
+  <div class="details">
+    <div class="card" onclick="openModal('candles')">18 Candles</div>
+    <div class="card" onclick="openModal('roses')">18 Roses</div>
+    <div class="card" onclick="openModal('bills')">18 Bills</div>
+    <div class="card" onclick="openModal('gifts')">18 Gifts</div>
+    <div class="card" onclick="openModal('shots')">18 Shots</div>
+  </div>
+</section>
+
+<section>
+  <h2>RSVP</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <select required>
+      <option value="">Will you attend?</option>
+      <option>Yes, I will attend</option>
+      <option>Regretfully decline</option>
+    </select>
+    <button type="submit">Submit RSVP</button>
+  </form>
+</section>
+
+<section>
+  <h2>Location</h2>
+  <iframe src="https://www.google.com/maps?q=San%20Jose%20Occidental%20Mindoro&output=embed"></iframe>
+</section>
+
+<footer>
+  <p>Formal attire is respectfully requested.</p>
+  <p>Please scan the QR code on your invitation card to access this page.</p>
+</footer>
+
+<!-- Modals -->
+<div class="modal" id="candles"><div class="modal-content"><div class="close" onclick="closeModal('candles')">X</div><h3>18 Candles</h3><ol><li>Name 1</li><li>Name 2</li><li>Name 3</li><li>Name 4</li><li>Name 5</li><li>Name 6</li><li>Name 7</li><li>Name 8</li><li>Name 9</li><li>Name 10</li><li>Name 11</li><li>Name 12</li><li>Name 13</li><li>Name 14</li><li>Name 15</li><li>Name 16</li><li>Name 17</li><li>Name 18</li></ol></div></div>
+<div class="modal" id="roses"><div class="modal-content"><div class="close" onclick="closeModal('roses')">X</div><h3>18 Roses</h3><ol><li>Name 1</li><li>Name 2</li><li>Name 3</li><li>Name 4</li><li>Name 5</li><li>Name 6</li><li>Name 7</li><li>Name 8</li><li>Name 9</li><li>Name 10</li><li>Name 11</li><li>Name 12</li><li>Name 13</li><li>Name 14</li><li>Name 15</li><li>Name 16</li><li>Name 17</li><li>Name 18</li></ol></div></div>
+<div class="modal" id="bills"><div class="modal-content"><div class="close" onclick="closeModal('bills')">X</div><h3>18 Bills</h3><ol><li>Bill 1</li><li>Bill 2</li><li>Bill 3</li><li>Bill 4</li><li>Bill 5</li><li>Bill 6</li><li>Bill 7</li><li>Bill 8</li><li>Bill 9</li><li>Bill 10</li><li>Bill 11</li><li>Bill 12</li><li>Bill 13</li><li>Bill 14</li><li>Bill 15</li><li>Bill 16</li><li>Bill 17</li><li>Bill 18</li></ol></div></div>
+<div class="modal" id="gifts"><div class="modal-content"><div class="close" onclick="closeModal('gifts')">X</div><h3>18 Gifts</h3><ol><li>Gift 1</li><li>Gift 2</li><li>Gift 3</li><li>Gift 4</li><li>Gift 5</li><li>Gift 6</li><li>Gift 7</li><li>Gift 8</li><li>Gift 9</li><li>Gift 10</li><li>Gift 11</li><li>Gift 12</li><li>Gift 13</li><li>Gift 14</li><li>Gift 15</li><li>Gift 16</li><li>Gift 17</li><li>Gift 18</li></ol></div></div>
+<div class="modal" id="shots"><div class="modal-content"><div class="close" onclick="closeModal('shots')">X</div><h3>18 Shots</h3><ol><li>Shot 1</li><li>Shot 2</li><li>Shot 3</li><li>Shot 4</li><li>Shot 5</li><li>Shot 6</li><li>Shot 7</li><li>Shot 8</li><li>Shot 9</li><li>Shot 10</li><li>Shot 11</li><li>Shot 12</li><li>Shot 13</li><li>Shot 14</li><li>Shot 15</li><li>Shot 16</li><li>Shot 17</li><li>Shot 18</li></ol></div></div>
+
+<script>
+  function openModal(id){ document.getElementById(id).style.display='flex'; }
+  function closeModal(id){ document.getElementById(id).style.display='none'; }
+
+  const eventDate = new Date('March 15, 2026 18:00:00').getTime();
+  const countdownEl = document.getElementById('countdown');
+  setInterval(() => {
+    const now = new Date().getTime();
+    const d = eventDate - now;
+    if (d > 0) {
+      const days = Math.floor(d / (1000*60*60*24));
+      countdownEl.innerHTML = days + ' days to go';
+    } else {
+      countdownEl.innerHTML = 'Today is the celebration';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
